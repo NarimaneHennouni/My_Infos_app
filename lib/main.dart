@@ -7,8 +7,8 @@ void main() => runApp(
       backgroundColor: Colors.black,
       body: SafeArea(
         child:Column(
+          mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          SizedBox(height:50.0),
           CircleAvatar(
             radius: 50.0,
             backgroundImage: AssetImage('images/Nany.jpg'),
@@ -37,46 +37,36 @@ void main() => runApp(
             margin: EdgeInsets.fromLTRB(75.0, 0.0, 40.0, 10.0),
             padding: EdgeInsets.all(5.0),
           ),
-          Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: Card(
+          SizedBox(
+            height: 22.0,
+            width: 100.0,
+            child: Divider(color: Colors.grey,)
+          ),
+            Card(
               margin: EdgeInsets.symmetric(vertical:20.0,horizontal:30.0),
               color: Colors.white,
-              child: Padding(
-                padding:EdgeInsets.all(10.0),
-              child:Row(
-                children: <Widget>[
-                   Icon(
+              child: ListTile(
+                leading:Icon(
                      Icons.phone,
-                     color: Colors.black,),
-                     SizedBox(width:10.0),
-                  Text("0559786195"),
-                ],
-
-              )
+                     color: Colors.black),
+                title:  Text("0559786195"),
+                
+                  
               ),
               ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(4.0),
-            child: Card(
+       Card(
               margin: EdgeInsets.symmetric(vertical:0.0,horizontal:30.0),
               color: Colors.white,
-              child: Padding(
-                padding:EdgeInsets.all(10.0),
-              child:Row(
-                children: <Widget>[
-                   Icon(
+              child:ListTile(
+                leading:Icon(
                      Icons.email,
-                     color: Colors.black,),
-                     SizedBox(width:10.0),
-                  Text("hn_hennouni"),
-                ],
+                     color: Colors.black),
+         
+              title: Text("hn_hennouni"),
+                  
+               ),
+              ),
 
-              )
-              ),
-              ),
-          ),
         ],
       ),
   )
